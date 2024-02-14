@@ -40,7 +40,8 @@ int main()
     
         if (d<0) 
             printf("Korney net\n");
-            
+
+        printf("Желаете продолжить? 5-да, 4-нет");    
         scanf("%d", &x);    
         if(x > 5 || x < 5)
             test = false;
