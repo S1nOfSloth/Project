@@ -39,7 +39,7 @@ int main()
         }
     
         if (d<0) 
-            printf("Korney net\n");
+            printf("Корне нет\n");
 
         printf("Желаете продолжить? 5-да, 4-нет");    
         scanf("%d", &x);    
