@@ -1,4 +1,4 @@
-#icnlude <stdio.h>
+#include <stdio.h>
 
 int main()
 {
@@ -31,7 +31,7 @@ int main()
   printf("Квадрат матрицы:\n");
   for (i = 0; i < 2; i++){
     for (j = 0; j < 2; j++){
-      printf("%d", matrix_1[i][j] * matrix_1[i][j]);
+      printf("%d ", matrix_1[i][j] * matrix_1[i][j]);
     }
   }
   return 0;
