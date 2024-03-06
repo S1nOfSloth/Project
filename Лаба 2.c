@@ -1,6 +1,7 @@
 #include <stdio.h>
 int main()
 {
+    //Задание 2
     int x, y, i, j, n, t;
     double main_diagonal = 0;
     double side_diagonal = 0;
@@ -31,6 +32,7 @@ int main()
     printf("Сумма элементов на главной диагонали: %.1lf\n", main_diagonal);
     printf("Сумма элементов на побочной диагонали: %.1lf\n", side_diagonal);
     
+    //Задание 2.1
     int matrix_0[2][2];
     int matrix_1[2][2];
     printf("Введите значения элементов матрицы 2 на 2:\n");
