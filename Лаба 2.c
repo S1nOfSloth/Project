@@ -1,7 +1,7 @@
+#include <stdio.h>
 int main()
 {
-    int x, y;
-    int i, j;
+    int x, y, i, j, n, t;
     double main_diagonal = 0;
     double side_diagonal = 0;
     printf("Введите размерность матрицы:\n");
@@ -31,18 +31,37 @@ int main()
     printf("Сумма элементов на главной диагонали: %.1lf\n", main_diagonal);
     printf("Сумма элементов на побочной диагонали: %.1lf\n", side_diagonal);
     
+    int matrix_0[2][2];
     int matrix_1[2][2];
     printf("Введите значения элементов матрицы 2 на 2:\n");
     for (i = 0; i < 2; i++){
         for (j = 0; j < 2; j++){
-          scanf("%d", &matrix_1[i][j]);
+            printf("matrix_0[%d][%d]: ", i, j);
+            scanf("%d", &matrix_0[i][j]);
         }
+      }printf("\n");
+    printf("Матрица 2 на 2:\n");
+    for (i = 0; i < 2; i++){
+        for (j = 0; j < 2; j++){
+          printf("%d ", matrix_0[i][j]);
+        }printf("\n");
       }
+    while (t < 2){
+        for(i = 0; i < 2; i++){
+            for(j = 0; j < 2; j++){
+                matrix_1[i][j] = 0;
+                for(n = 0; n < 2; n++){
+                    matrix_1[i][j] += matrix_0[i][n] * matrix_0[n][j];
+                    t++;
+                }
+            }
+        }
+    }
     printf("Квадрат матрицы:\n");
     for (i = 0; i < 2; i++){
         for (j = 0; j < 2; j++){
-          printf("%d ", matrix_1[i][j] * matrix_1[i][j]);
-        }
-      }
+            printf("%d ", matrix_1[i][j]);
+        }printf("\n");
+    }
     return 0;
 }
