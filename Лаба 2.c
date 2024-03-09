@@ -48,17 +48,16 @@ int main()
           printf("%d ", matrix_0[i][j]);
         }printf("\n");
       }
-    while (t < 2){
-        for(i = 0; i < 2; i++){
-            for(j = 0; j < 2; j++){
-                matrix_1[i][j] = 0;
-                for(n = 0; n < 2; n++){
-                    matrix_1[i][j] += matrix_0[i][n] * matrix_0[n][j];
-                    t++;
-                }
+
+    for(i = 0; i < 2; i++){
+        for(j = 0; j < 2; j++){
+            matrix_1[i][j] = 0;
+            for(n = 0; n < 2; n++){
+                matrix_1[i][j] += matrix_0[i][n] * matrix_0[n][j];
             }
         }
     }
+    
     printf("Квадрат матрицы:\n");
     for (i = 0; i < 2; i++){
         for (j = 0; j < 2; j++){
