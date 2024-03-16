@@ -13,6 +13,9 @@ int main(){
         else if (mass[i] == 'b'){
             mass[i] = 'B';
         }
+        else if (mass[i] == '+'){
+            mass[i] = '-';
+        }
     }
     printf("Итоговая строка: ");
     printf("%s", mass);
