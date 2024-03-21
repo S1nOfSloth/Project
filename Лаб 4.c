@@ -22,7 +22,7 @@ int main()
 
     return 0;
 }
-//second.h
+//second.c
 #include <math.h>
 
 float Perimeter(float a, float b, float c)
@@ -34,3 +34,6 @@ float Area(float a, float b, float c)
     float p = (a+b+c)/2.;
     return sqrt(p * (p - a) * (p - b) * (p - c));
 }
+//second.h
+float Perimeter(float a, float b, float c);
+float Area(float a, float b, float c);
