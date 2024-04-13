@@ -1,33 +1,34 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
-    //FILE *inputFile, *outputFile;
-    char name[50];
-    char 
+    
+    char name[100];
+    char surname[100];
+    char paternal_name[100];
     int year;
+    char c = -112;
+    char *result;
 
-    // Открываем исходный файл для чтения
     FILE* inputFile = fopen("input.txt", "r");
     if (inputFile == NULL) {
         printf("Ошибка открытия исходного файла\n");
         return 0;
     }
 
-    // Открываем файл для записи отфильтрованных данных
     FILE* outputFile = fopen("output.txt", "w");
     if (outputFile == NULL) {
         printf("Ошибка открытия файла для записи\n");
         return 0;
     }
 
-    // Читаем данные из исходного файла и фильтруем по заданному условию
-    while (fscanf(inputFile, "%s %d", name, &year) != EOF) {
-        if (year > 1980) {
-            fprintf(outputFile, "%s %d\n", name, year);
+    while (fscanf(inputFile, "%s %s %s %d", surname, name, paternal_name, &year) != EOF) {
+        if (result = strchr(surname, c)) 
+        {
+            fprintf(outputFile, "%s %s %s %d\n", surname, name, paternal_name, year);
         }
     }
 
-    // Закрываем файлы
     fclose(inputFile);
     fclose(outputFile);
 
