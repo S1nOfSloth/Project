@@ -1,5 +1,4 @@
 #include <stdio.h> 
-#include <string.h> 
  
 struct humen{ 
   char name[30],surname[30]; 
@@ -12,7 +11,7 @@ int main(){
   int i,j; 
    
   for( i=0; i < n; i++){ 
-    printf("Enter the %d person's name, surname and date of birth: ", i+1); 
+    printf("Введите имя, фамилию и год рождения %d человека: ", i+1); 
     scanf("%s %s %d", p[i].name, p[i].surname, &p[i].year); 
   } 
   
@@ -30,7 +29,7 @@ int main(){
         } 
     } 
    
-  printf("\nSorted list of people: \n"); 
+  printf("\nРезультат: \n"); 
   for ( i=0; i<n; i++){ 
     printf("%s %s %d \n", psorted[i].name, psorted[i].surname, psorted[i].year); 
   } 
